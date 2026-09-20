@@ -1,10 +1,9 @@
 
-```md
 # AlphaPlusStack
 
 Official website and operations platform for **AlphaPlusStack** — web development, hosting, and reliable digital products.
 
-Public site,, and client portal in one codebase.
+Public site, admin dashboard, and client portal in one codebase.
 
 ---
 
@@ -15,7 +14,8 @@ AlphaPlusStack helps businesses launch and run websites, web apps, and custom so
 This repository contains:
 
 - **Public website** — home, services, pricing, portfolio, blog, reviews, contact
-
+- **Admin dashboard** — enquiries, clients, projects, CMS, invoices, team, analytics
+- **Client portal** — projects, milestones, invoices, messages, support, reviews
 
 ---
 
@@ -28,6 +28,17 @@ This repository contains:
 - Pricing table (development / deployment / total)
 - Dark / light theme
 
+### Admin
+
+- Role-based access (`admin`, `super_admin`, `editor`, `support_agent`)
+- Enquiry to project conversion
+- CMS, blog, FAQ, services, and pricing management
+- Invoices, assets / hosting, audit logs, and team
+
+### Client
+
+- Dashboard, projects, invoices, messages, and support tickets
+- Separate password-reset flows for admin and client
 
 ---
 
@@ -58,10 +69,6 @@ alphaplusstack/
 │   ├── middleware/
 │   └── utils/
 └── README.md
-```
-
----
-
 ## Prerequisites
 
 - Node.js 18+
