@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AlphaPlusStack | Web Development & Full Stack Digital Solutions</title>
+    <meta name="description" content="AlphaPlusStack builds modern websites, web applications, full-stack solutions, UI/UX experiences and scalable digital products for businesses and startups." />
+    <meta name="theme-color" content="#0B1220" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="AlphaPlusStack | Web Development & Full Stack Digital Solutions" />
+    <meta property="og:description" content="Your Vision + Our Stack = Real Impact. Full-stack development, UI/UX design, cloud solutions and more." />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AlphaPlusStack" />
+    <meta name="twitter:description" content="Your Vision + Our Stack = Real Impact." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <script>
+      // Apply saved theme before paint to avoid a light/dark flash
+      (function () {
+        try {
+          var saved = localStorage.getItem('aps-theme');
+          var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var isDark = saved ? saved === 'dark' : false; // light is default even if system is dark
+          if (saved === 'system') isDark = systemDark;
+          if (isDark) document.documentElement.classList.add('dark');
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

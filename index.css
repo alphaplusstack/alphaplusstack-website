@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  @apply bg-white text-slate-800 dark:bg-brand-charcoal dark:text-slate-200 font-body antialiased;
+}
+
+h1, h2, h3, h4 {
+  @apply font-display;
+}
+
+::selection {
+  @apply bg-brand-blue/20;
+}
+
+/* Visible focus ring for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #12B4D6;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.eyebrow {
+  @apply text-xs font-semibold tracking-[0.2em] uppercase text-brand-blue dark:text-brand-cyan;
+}
+
+.section-heading {
+  @apply text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white tracking-tight;
+}
+
+.card {
+  @apply rounded-2xl border border-slate-200/70 bg-white shadow-soft dark:border-white/10 dark:bg-brand-charcoal-soft dark:shadow-soft-dark;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full bg-brand-gradient px-6 py-3 text-sm font-semibold text-white shadow-soft transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98];
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-800 transition-colors duration-200 hover:border-brand-blue hover:text-brand-blue dark:border-white/20 dark:text-white dark:hover:border-brand-cyan dark:hover:text-brand-cyan;
+}
